@@ -1,10 +1,15 @@
 ---
+import '../styles/global.css';
+
 const pageTitle = "About Me";
 
 const identity = {
     firstName: "Parwesh",
+    city: "Los Angeles",
+    state: "California",
     country: "United States",
     occupation: "Game Designer",
+    employer: "Treyarch",
     hobbies: ["video games", "reading", "writing", "art"],
 }
 
@@ -46,14 +51,14 @@ const textCase = "uppercase";
 		<h1>{pageTitle}</h1>
         <h2>... and my new Astro site!</h2>
 
-        <p>I am working through Astro's introductory tutorial. This is the seond page on my website, and it's the first one I built myself!</p>
+        <p>I am working through Astro's introductory tutorial. This is the second page on my website, and it's the first one I built myself using Astro!!</p>
 
         <p>This site will update as I complete more of the tutorial, so keep checking back and see how my journey is going!</p>
         
         <p>Here are a few facts about me:</p>
         <ul>
             <li>My name is {identity.firstName}.</li>
-            <li>I live in the {identity.country} and I work as a {identity.occupation}.</li>
+            <li>I live in {identity.city}, {identity.state} and I work as a {identity.occupation} at <a href="https://treyarch.com/">{identity.employer}</a>.</li>
             {identity.hobbies.length >= 2 &&
                 <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li>
             }
